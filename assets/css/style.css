@@ -1,0 +1,85 @@
+body{
+    background-image:linear-gradient(to right, #0B0B61, #A9A9F5);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    vertical-align: center;
+}li{
+    list-style-type: none;
+    text-align:center;
+}
+.error{
+    color:red;
+    font-weight:bold;
+    font-size: 22px;
+}
+.ok{
+    color:green;
+    font-weight:bold;
+}
+#register{
+    margin:40px;
+    padding:15px;
+    background-color:white;
+    border:4px solid black;
+    border-radius:30px;
+    box-shadow: 3px 3px 5px black;
+}
+register :p{
+    color:white;
+}
+table, th, tr, td{
+    text-align:center;
+    background-color:white;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+label{
+    font-weight: bold;
+}
+table{
+    width:100%;
+    margin-bottom:15px;
+    border:3px solid black;
+    box-shadow: 3px 3px 5px black;
+}
+th{
+    width:20%;
+    font-weight:bold;
+    font-size:32px;
+}
+td{
+    padding:20px;
+}
+.validated{
+    background-color: white;
+    font-weight:bold;
+    text-align:center;
+}
+.validated h1{
+    color:green;
+    background-color: white;
+}
+.validated p{
+    color:black;
+}
+.negative{
+    background-color: white;
+}
+.help li{
+    display:none;
+}
+.titleHelp{
+    display:flex;
+    justify-content: space-around;
+    padding-left:0;
+}
+.negTitle,.pTitle{
+    text-align: center;
+}
+.negTitle{
+    color:red;
+}
+.title:hover{
+    cursor: pointer;
+}
