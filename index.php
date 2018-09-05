@@ -36,7 +36,7 @@
                             <!--Condition ternaire pour afficher une étoile en vert ou rouge selon la valeur de l'input-->
                             <?php echo ($lName == 1 ) ? '<span class="ok">*</span>' : '';echo (($lName == 0) || ($lName == 2)) ? '<span class="starError">*</span>' : ''; ?>
                             <!--Input Nom de famille-->
-                            <input type="text" class="form-control" id="lastName" name="lastName" maxlength="15" value="<?php echo (isset($_POST['submit'])) ? $lastName : ''; ?>" placeholder="Votre nom" />
+                            <input type="text" class="form-control" id="lastName" name="lastName" maxlength="50" value="<?php echo (isset($_POST['submit'])) ? $lastName : ''; ?>" placeholder="Votre nom" />
                                 <!--Condition pour afficher ou non un message d'erreur-->
                                 <?= (isset($formError['civility'])) ? '<p class="error">' . $formError['civility'] . '</p>' : ''; ?>
                     <!--Champs prénom-->

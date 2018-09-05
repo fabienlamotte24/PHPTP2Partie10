@@ -26,10 +26,6 @@ if (isset($_POST['submit'])) {
         //Si les conditions sont bonnes, on passe dans la vue d'affichage des valeurs remplies
         $civil = 1;
         //Condition d'erreur si jamais la valeur grisée par défaut avait été selectionnée
-    } elseif (!empty($civilityContent) && preg_match($wrongRegCivility, $civilityContent)) {
-        //Autrement, nous restons dans la vue actuelle, celle où le formulaire demande toujours les valeurs à remplir avec affichage des erreurs
-        $civil = 0;
-        $formError['civility'] = 'Vous n\'avez pas sélectionné votre civilité';
     } else {
         $civil = 0;
         $formError['civility'] = 'Vous n\'avez pas sélectionné votre civilité';
