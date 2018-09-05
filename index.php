@@ -30,7 +30,7 @@
                                     <option value="3" <?= ((!empty($civilityContent)) && ($civilityContent == 3)) ? 'selected' : ''?>>Autre</option>
                                 </select>
                                     <!--Condition pour afficher ou non un message d'erreur-->
-                                    <?php echo ($civil == 0) ? '<p class="error">' . $civilityError . '</p>' : ''; ?>
+                                    <?= (isset($formError['civility'])) ? '<p class="error">' . $formError['civility'] . '</p>' : ''; ?>
                     <!--Champs nom de famille-->
                         <label for="lastName">Nom de famille: </label>
                             <!--Condition ternaire pour afficher une étoile en vert ou rouge selon la valeur de l'input-->
@@ -38,7 +38,7 @@
                             <!--Input Nom de famille-->
                             <input type="text" class="form-control" id="lastName" name="lastName" maxlength="15" value="<?php echo (isset($_POST['submit'])) ? $lastName : ''; ?>" placeholder="Votre nom" />
                                 <!--Condition pour afficher ou non un message d'erreur-->
-                                <?php echo ($lName == 0) ? '<p class="error">' . $lastNameError . '</p>' : ''; ?>
+                                <?= (isset($formError['civility'])) ? '<p class="error">' . $formError['civility'] . '</p>' : ''; ?>
                     <!--Champs prénom-->
                         <label for="firstName">Prénom: </label>
                             <!--Condition  ternaire pour afficher une étoile en vert ou en rouge selon la valeur de l'input-->
@@ -46,7 +46,7 @@
                             <!--Input Prénom-->
                             <input type="text" class="form-control" id="firstName" name="firstName" maxlength="15" value="<?php echo (isset($_POST['submit'])) ? $firstName : ''; ?>" placeholder="Votre prénom" />
                                 <!--Condition pour afficher ou non un message d'erreur-->
-                                <?php echo ($fName == 0) ? '<p class="error">' . $firstNameError . '</p>' : ''; ?>
+                                <?= (isset($formError['firstName'])) ? '<p class="error">' . $formError['firstName'] . '</p>' : ''; ?>
                     <!--Champs age-->
                         <label for="age">Age: </label>
                         <!--Condition ternaire pour afficher une étoile verte ou rouge selon la valeur de l'input-->
@@ -54,7 +54,7 @@
                             <!--Input Age-->    
                             <input type="text" class="form-control" id="age" name="age" maxlength="2" value="<?php echo (isset($_POST['submit'])) ? $age : ''; ?>" placeholder="Votre age" />
                                 <!--Condition pour afficher ou non un message d'erreur-->
-                                <?php echo ($AGE == 0) ? '<p class="error">' . $ageError . '</p>' : '' ?>
+                                <?= (isset($formError['age'])) ? '<p class="error">' . $formError['age'] . '</p>' : ''; ?>
                     <!--Champs société-->
                         <label for="society">Société: </label>
                             <!--Condition en ternaire pour afficher une étoile verte ou rouge selon la valeur de l'input-->
@@ -62,7 +62,7 @@
                             <!--Input Société-->
                             <input type="text" class="form-control" id="society" name="society" maxlength="20" value="<?php echo (isset($_POST['submit'])) ? $society : ''; ?>" placeholder="Votre société" />
                                 <!--Condition pour afficher ou non un message d'erreur-->
-                                <?php echo ($sty == 0) ? '<p class="error">' . $societyError . '</p>' : ''; ?>
+                                <?= (isset($formError['society'])) ? '<p class="error">' . $formError['society'] . '</p>' : ''; ?>
                     <!--Boutton de validation-->
                         <input type="submit" class="form-control" id="submit" name="submit" value="J'affiche mes informations !" />
                     </form>
